@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--You won't see the icon in design tab,Run this application to see the effect-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+<!--For heart icon-->
+    <com.like.LikeButton
+        android:id="@+id/heart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:circle_end_color="#E91E63"
+        app:dots_secondary_color="#F44336"
+        app:icon_size="25dp"
+        app:icon_type="heart"
+         />
+<!--For Bookmark icon-->
+    <com.like.LikeButton
+        android:id="@+id/star_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon_size="25dp"
+        app:icon_type="star"
+        app:circle_end_color="#FF9800"
+        app:dots_secondary_color="#FF9800"
+        android:layout_marginTop="40dp"
+        />
+<!--If You want the button to be liked by default then use the attribute app:liked="true"  -->
+<!--The Interesting thing about this library is that we can change the
+    liked or unliked icon also by using app:like_drawable="@drawable/your drawable" and
+    app:unlike_drawable="@drawable/your drawable" in case if we dont want to use heart or start icon.-->
+</LinearLayout>

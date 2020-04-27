@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<!--Set up BubbleNavigationLinearView-->
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bubbleNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="4dp"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+         >
+        <!-- You can add upto 5 BubbleToggleView -->
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_shape="@drawable/selected_nav"
+            app:bt_title="Home"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="8dp" />
+        <!--bt_shape sets background when bottom navigation is selected-->
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_notification"
+            app:bt_shape="@drawable/selected_nav"
+            app:bt_title="Notification"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="8dp" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_location"
+            app:bt_shape="@drawable/selected_nav"
+            app:bt_title="Location"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="8dp" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_profile"
+            app:bt_shape="@drawable/selected_nav"
+            app:bt_title="Profile"
+            app:bt_padding="10dp"
+            app:bt_active="true"
+            app:bt_titlePadding="8dp" />
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+<!--
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+        android:id="@+id/top_navigation_constraint2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="4dp"
+        android:padding="12dp"
+        app:bnc_mode="packed"
+        >
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_shape="@drawable/selected_nav"
+            app:bt_title="Home"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="8dp" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_notification"
+            app:bt_shape="@drawable/selected_nav"
+            app:bt_title="Notification"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="8dp" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_location"
+            app:bt_shape="@drawable/selected_nav"
+            app:bt_title="Notification"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="8dp" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/nav8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_profile"
+            app:bt_shape="@drawable/selected_nav"
+            app:bt_title="Notification"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="8dp" />
+
+        &lt;!&ndash; Add more child items here - max upto 5 &ndash;&gt;
+
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+-->
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
+
+</LinearLayout>

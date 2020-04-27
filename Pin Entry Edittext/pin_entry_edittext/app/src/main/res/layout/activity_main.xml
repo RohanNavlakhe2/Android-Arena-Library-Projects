@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
+
+        <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/editTextCode"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:cursorVisible="false"
+            android:digits="1234567890"
+            android:elevation="1dp"
+            android:inputType="number"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:pinAnimationType="popIn"
+            app:pinBackgroundIsSquare="true"
+            app:pinLineColors="#706E6E"
+            android:textColor="#706E6E"
+            app:pinTextBottomPadding="10dp"
+            android:imeOptions="actionDone"
+           />
+    </LinearLayout>
+
+</RelativeLayout>

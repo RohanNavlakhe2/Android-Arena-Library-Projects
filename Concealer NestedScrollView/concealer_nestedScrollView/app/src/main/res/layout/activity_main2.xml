@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Make sure that your parent layout should be either RelativeLayout or FrameLayout or Constraint-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.simmorsal.library.ConcealerNestedScrollView
+        android:id="@+id/concealerNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Put your main content here,This example
+        is with BottomNavigationView so I'm taking Fragment-->
+            <fragment
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/mobile_navigation" />
+    </com.simmorsal.library.ConcealerNestedScrollView>
+
+    <!--This One is a header view,which decides when your footer view will be hidden-->
+    <!--Don't set marginTop for header here we will set it from java-->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Header"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <!--This one is footer view which will be hidden when header view will be hidden in some percentage.
+        by default it is 40%,Which you can change from java-->
+    <!--Don't set marginBottom for footer here we will set it from java-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>

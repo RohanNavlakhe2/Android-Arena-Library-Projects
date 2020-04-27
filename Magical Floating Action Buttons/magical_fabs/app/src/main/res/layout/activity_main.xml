@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data></data>
+<RelativeLayout  xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+           <!--put your screen design here-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_coupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/fab1Lyt"
+            android:visibility="gone"
+            android:layout_gravity="end">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Submit"
+                android:padding="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_gradient"
+                android:textColor="@android:color/white" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="45dp"
+                android:id="@+id/fab1"
+                android:src="@drawable/coupon_img"
+                android:layout_gravity="end"
+                android:layout_marginEnd="3dp"
+                android:visibility="invisible"
+                fab:pressedTranslationZ="12dp"
+                app:layout_anchorGravity="bottom|right|end" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/fab2Lyt"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="end">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:text="Submit"
+                android:padding="5dp"
+                android:background="@drawable/bg_gradient"
+                android:textColor="@android:color/white" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="45dp"
+                android:id="@+id/fab2"
+                android:visibility="invisible"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/deal_img"
+                android:layout_gravity="end"
+                fab:pressedTranslationZ="12dp"
+                app:layout_anchorGravity="bottom|right|end" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabCustomSize="50dp"
+            android:id="@+id/floatingActionButton"
+            android:src="@drawable/plus"
+            android:layout_gravity="end"
+             />
+
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

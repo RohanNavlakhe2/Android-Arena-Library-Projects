@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Run the application to see the effect-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+         <!--Fading Circle-->
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit1"
+            style="@style/SpinKitView.FadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            app:SpinKit_Color="#293B4F" />
+
+    <!--Foldin cube-->
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit2"
+        style="@style/SpinKitView.FoldingCube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        app:SpinKit_Color="#1A79BF" />
+
+    <!--Three Bounce-->
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:background="#D45100"
+        android:layout_margin="15dp">
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit3"
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:SpinKit_Color="#ffffff" />
+    </LinearLayout>
+
+    <!--Wave-->
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:background="#00BA9B"
+        android:layout_margin="15dp">
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit4"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:SpinKit_Color="#ffffff" />
+    </LinearLayout>
+    <!--Try out more here:
+         https://github.com/ybq/Android-SpinKit   -->
+</LinearLayout>
